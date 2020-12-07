@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NtP-OE-cPg">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--super конвертер-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="klickmoney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mD7-4z-5cC">
+                                <rect key="frame" x="70.666666666666686" y="128" width="234" height="412"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktq-N6-cC3">
+                                        <rect key="frame" x="66.999999999999972" y="0.0" width="99.666666666666657" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="99.670000000000002" id="YsV-vS-sc2"/>
+                                            <constraint firstAttribute="height" constant="60" id="vfQ-Dm-z3V"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hxp-rj-6OV">
+                                        <rect key="frame" x="37" y="65" width="160" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="ZcY-GW-hvK"/>
+                                            <constraint firstAttribute="height" constant="72" id="pHN-4m-zMb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5qh-xK-nY8">
+                                        <rect key="frame" x="37" y="142" width="160" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="1Hw-kJ-0DG"/>
+                                            <constraint firstAttribute="width" constant="160" id="6gm-Ju-Yj4"/>
+                                            <constraint firstAttribute="height" constant="72" id="F1u-lU-0wr"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="nux-wB-a3h"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7h7-dr-S6j">
+                                        <rect key="frame" x="68.666666666666686" y="219" width="96.333333333333314" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yO7-uz-aUs">
+                                        <rect key="frame" x="0.0" y="284" width="234" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <state key="normal" title="пересчитать" image="R iconfinder_finance-money-dollar-43_4058028 (1) копия"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="convertUSDToRUB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xah-ee-EIG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Hxp-rj-6OV" firstAttribute="top" secondItem="Ktq-N6-cC3" secondAttribute="bottom" constant="5" id="2Cg-hH-x9D"/>
+                                    <constraint firstItem="Hxp-rj-6OV" firstAttribute="centerX" secondItem="mD7-4z-5cC" secondAttribute="centerX" id="5lN-hu-0XG"/>
+                                    <constraint firstItem="5qh-xK-nY8" firstAttribute="top" secondItem="Hxp-rj-6OV" secondAttribute="bottom" constant="5" id="Cw7-yu-ikk"/>
+                                    <constraint firstItem="5qh-xK-nY8" firstAttribute="centerX" secondItem="mD7-4z-5cC" secondAttribute="centerX" id="Kbw-2h-Nyg"/>
+                                    <constraint firstItem="7h7-dr-S6j" firstAttribute="top" secondItem="5qh-xK-nY8" secondAttribute="bottom" constant="5" id="LFG-H4-VZS"/>
+                                    <constraint firstAttribute="trailing" secondItem="5qh-xK-nY8" secondAttribute="trailing" constant="37" id="LQy-xC-Lxl"/>
+                                    <constraint firstItem="5qh-xK-nY8" firstAttribute="leading" secondItem="mD7-4z-5cC" secondAttribute="leading" constant="37" id="Qec-y2-AMC"/>
+                                    <constraint firstItem="Ktq-N6-cC3" firstAttribute="top" secondItem="mD7-4z-5cC" secondAttribute="top" id="RS3-dD-kW6"/>
+                                    <constraint firstItem="5qh-xK-nY8" firstAttribute="top" secondItem="Hxp-rj-6OV" secondAttribute="bottom" constant="5" id="hsj-iC-3r6"/>
+                                    <constraint firstItem="7h7-dr-S6j" firstAttribute="centerX" secondItem="mD7-4z-5cC" secondAttribute="centerX" id="iFy-gL-Dfl"/>
+                                    <constraint firstItem="Hxp-rj-6OV" firstAttribute="top" secondItem="Ktq-N6-cC3" secondAttribute="bottom" constant="5" id="iQC-CE-2Or"/>
+                                    <constraint firstItem="Hxp-rj-6OV" firstAttribute="top" secondItem="Ktq-N6-cC3" secondAttribute="bottom" constant="5" id="tpN-vH-hl1"/>
+                                    <constraint firstItem="Hxp-rj-6OV" firstAttribute="leading" secondItem="mD7-4z-5cC" secondAttribute="leading" constant="37" id="wOi-1x-h2n"/>
+                                    <constraint firstItem="5qh-xK-nY8" firstAttribute="top" secondItem="Hxp-rj-6OV" secondAttribute="bottom" constant="5" id="zF8-Qm-pJd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mD7-4z-5cC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Uv9-eo-Nzg"/>
+                            <constraint firstItem="mD7-4z-5cC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nNi-WH-zGG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="super конвертер" id="8Wv-Xz-R1a"/>
+                    <connections>
+                        <outlet property="RuTF" destination="5qh-xK-nY8" id="aGH-U7-NtV"/>
+                        <outlet property="UsTF" destination="Hxp-rj-6OV" id="36R-D2-cZq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726.08695652173924" y="75.815217391304358"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tzv-Sj-stx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NtP-OE-cPg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XZg-Rr-VbD">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="djf-8b-Jbz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ha1-NF-UY5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-184.05797101449278" y="76.339285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="R iconfinder_finance-money-dollar-43_4058028 (1) копия" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
