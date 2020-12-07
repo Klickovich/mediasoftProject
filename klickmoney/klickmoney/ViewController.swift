@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     var keys: [String] = []
     var values: [Double] = []
     var ruble: Double?
-    //оутлеты активно соединяют view controller и main.storyboard//
+    //аутлеты активно соединяют view controller и main.storyboard//
     @IBOutlet weak var RuTF: UITextField!
     @IBOutlet weak var UsTF: UITextField!
     //delegate
